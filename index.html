@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyrics Animation Test</title>
+    <style>
+        body {
+            background-color: #222;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            color: white;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 40px;
+            color: #ff4081;
+        }
+        .lyrics {
+            font-size: 24px;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid #ff4081;
+            display: inline-block;
+            width: 0;
+            animation: typing 4s steps(40, end) forwards, blink 0.8s infinite;
+        }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Lyrics Animation Test</h1>
+    
+    <p class="lyrics">"This is a test of animated lyrics..."</p>
+
+</body>
+</html>
