@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lyrics Animation Test</title>
+    <title>Glimpse of Us - Lyrics Animation</title>
     <style>
         body {
-            background-color: #222;
+            background-color: #f0f0f0;
             text-align: center;
             font-family: 'Arial', sans-serif;
-            color: white;
             padding: 20px;
+            overflow: hidden;
         }
         h1 {
             font-size: 40px;
@@ -19,13 +19,21 @@
         .lyrics {
             font-size: 24px;
             font-weight: bold;
+            color: #333;
             white-space: nowrap;
             overflow: hidden;
-            border-right: 3px solid #ff4081;
             display: inline-block;
             width: 0;
             animation: typing 4s steps(40, end) forwards, blink 0.8s infinite;
+            margin-bottom: 20px;
         }
+        .lyrics1 { animation-delay: 0s; }
+        .lyrics2 { animation-delay: 5s; }
+        .lyrics3 { animation-delay: 10s; }
+        .lyrics4 { animation-delay: 15s; }
+        .lyrics5 { animation-delay: 20s; }
+        .lyrics6 { animation-delay: 25s; }
+
         @keyframes typing {
             from { width: 0; }
             to { width: 100%; }
@@ -33,12 +41,31 @@
         @keyframes blink {
             50% { border-color: transparent; }
         }
+
+        .heart {
+            font-size: 100px;
+            color: red;
+            animation: heartbeat 1s infinite alternate;
+            margin-top: 50px;
+        }
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.2); }
+        }
     </style>
 </head>
 <body>
-    <h1>Lyrics Animation Test</h1>
+    <h1>"Glimpse of Us" Lyrics Animation</h1>
     
-    <p class="lyrics">"This is a test of animated lyrics..."</p>
+    <!-- Animated Lyrics -->
+    <p class="lyrics lyrics1">"I met a girl in the village..."</p>
+    <p class="lyrics lyrics2">"She was too good to be true..."</p>
+    <p class="lyrics lyrics3">"But we still held on to what we knew..."</p>
+    <p class="lyrics lyrics4">"Glimpse of us, just a moment..."</p>
+    <p class="lyrics lyrics5">"Fading into the blue..."</p>
+    <p class="lyrics lyrics6">"I see a glimpse of us..."</p>
+
+    <div class="heart">❤️</div>
 
 </body>
 </html>
